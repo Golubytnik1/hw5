@@ -20,8 +20,8 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 
     dp.register_message_handler(start_command, commands=['start'])
-    dp.register_message_handler(help_command, commands=['help'])
-    dp.register_message_handler(remind_command, commands=['remind'])
+    dp.register_callback_query_handler(help_command, text='help')
+    dp.register_callback_query_handler(remind_command, text='remind')
     dp.register_message_handler(schedule_command, Text(startswith='напомни'))
 
     executor.start_polling(dp, skip_updates=True, on_startup=startup)

@@ -5,8 +5,8 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 """ Обработчик категорий """
 start_kb = InlineKeyboardMarkup(resize_keyboard=True)
 start_kb.add(
-	InlineKeyboardButton('Напоминалка', callback_data='remind_command'),
-	InlineKeyboardButton('Помощь', callback_data='help_command')
+	InlineKeyboardButton('Напоминалка', callback_data='remind'),
+	InlineKeyboardButton('Помощь', callback_data='help')
 )
 
 

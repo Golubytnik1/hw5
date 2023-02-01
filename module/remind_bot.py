@@ -4,12 +4,13 @@ import asyncio
 import aioschedule
 
 
-async def remind_command(message: types.Message):
+async def remind_command(cb: types.CallbackQuery):
     '''
         Функция оповещения о напоминалке
     '''
-    await message.answer(text=f"Напишите, что вам нужно напомнить;"
-                              f"Пример: напомни встать через 5 минут!")
+    await cb.bot.send_message(chat_id=cb.from_user.id,
+                              text=f"Напишите, что вам нужно напомнить;"
+                                   f"Пример: напомни встать через 5 минут!")
 
 
 async def schedule_command(message: types.Message):
