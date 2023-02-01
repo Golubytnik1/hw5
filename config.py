@@ -1,6 +1,5 @@
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
-from aiogram.dispatcher.filters import Text
 from dotenv import load_dotenv
 from os import getenv
 
